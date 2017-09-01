@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript Example</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+<!-- header start -->
+
+<header style="width:100%">
+<div class="container">
+  <div class="row">
+  <!-- logo start -->
+   <div class="col-sm-6" style="padding:15px 0 0 0 ">
+     <img src="images/logo.png" alt="" style="width:440px;height:115px;" />
+   </div>
+   <!-- logo end -->
+
+   <div class="col-sm-6" style="padding:15px 0 0 0 ">
+    <div class="row">
+      <div class="col-sm-6" style="padding: 24px 0px 0px 63px;font-family:'satisfy_regular';
+    color: #5c5c5c;font-size:15px">
+         Call Us Today! (02) 9017 8413
+      </div>
+      <div class="col-sm-6" style="padding: 18px 00 00 00;">
+        <input type="text" onclick="this.value='';" onblur="validate_field('phone');"  value="Type desired Job Location" />
+      </div>
+    </div>
+    <nav class="navbar" >
+                  <ul class="nav navbar-nav" style="padding: 21px 0 0 0;font-size:11px">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Dating Blog</a></li>
+                    <li><a href="#">Who We Help</a></li>
+                    <li><a href="#">Why Vital</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+    </nav>
+   </div>
+   </div>
+</div>
+  </header>
+
+  <!-- header end -->
+<!-- section 1 start -->
+
+ <div style="background:url(images/who_we_help.jpg);padding:50px 0px" >
+ <div class="container">
+ <h4 style="text-align: center;width: 100%;
+    color:#fff;
+    font-size:35px;
+    font-family:'robotoslab-bold';
+    font-weight:bold;
+    margin: 0;line-height: 1.1em;">Thanks For Your Enquiry</h4>
+ </div>
+</div>
+ <!-- section 1 end -->
+ <!-- form start -->
+ <div class="container">
+ <form name="myform" method="post" action="#" onsubmit="validateform()"style="padding:70px">
+
+    <div class="list-group">
+       <div class="row" style="background-color:black;color:white">
+
+            <div class="col-sm-4" >
+              <a href="#" class="list-group-item active">
+              <img src="images/no_1.png" alt="">
+              <span>
+                <span>YOUR</span> PROFILE
+              </span></a>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/no_2.png" alt="">
+              <span>
+                <span>YOUR PARTNER</span> PREFERENCES
+              </span>
+            </div>
+           <div class="col-sm-4">
+              <img src="images/no_3.png" alt="">
+              <span>
+                <span>YOUR</span> INTEREST
+              </span>
+           </div>
+         </div>
+    </div>
+
+      <div>
+        <blockquote>So we can successfully match your details with suitable people, we first need to collect some information about you. Read each question carfully and  select or place a tick in the box for each of your characteristics. Please answer as honestly as you can, otherwise you may be disappointed with your matches and they with you.
+         </blockquote>
+      </div>
+ <div class="well well-lg">
+ <div class="row">
+  <div class="col-sm-6">
+    <div class="form-group">
+    <label>First Name:</label>
+      <input class="form-control" name="firstname" type="text" />
+    </div>
+    <div class="form-group">
+              <label>Phone No:</label>
+              <input class="form-control" name="phone" type="text" />
+    </div>
+    <div class="form-group">
+              <label>Email:</label>
+              <input class="form-control" name="email" type="text" />
+    </div>
+    <div class="form-group">
+              <label>Confirm Password:</label>
+              <input class="form-control" name="cpassword" type="text" />
+    </div>
+    <div class="form-group">
+              <label>Age:</label>
+              <input class="form-control" name="age" type="text" onchange=" calculate_age()" />
+    </div>
+    <div class="form-group">
+            <label>Interest:</label>
+              <div class="checkbox">
+                <label class="checkbox-inline"><input type="checkbox"name="options[]" value="Option1" />Biking</label>
+                <label class="checkbox-inline"><input type="checkbox"name="options[]" value="Option2" />Reading</label>
+                <label class="checkbox-inline"><input type="checkbox"name="options[]" value="Option3" />Playing</label>
+              </div>
+            </div>
+  </div>
+   <div class="col-sm-6">
+    <div class="form-group">
+     <label>Last Name:</label>
+     <input class="form-control" name="lastname" type="text" />
+    </div>
+    <div class="form-group">
+     <label>Office No:</label>
+     <input class="form-control" name="office" type="text" />
+     </div>
+    <div class="form-group">
+      <label>Password:</label>
+      <input class="form-control" name="password" type="text" />
+    </div>
+    <div class="form-group" >
+     <label>My birthdate is:</label>
+      <div>
+       <select name="month" class="form-group selectpicker">
+                      <option value="1">Jan</option>
+                      <option value="2">Feb</option>
+                      <option value="3">March</option>
+                      <option value="4">April</option>
+                      <option value="5">May</option>
+                      <option value="6">June</option>
+                      <option value="7">July</option>
+                      <option value="8">Aug</option>
+                      <option value="9">Sep</option>
+                      <option value="10">Oct</option>
+                      <option value="11">Nov</option>
+                      <option value="12">Dec</option>
+       </select>
+
+
+       <select name="day" class="form-group selectpicker">
+                      <option value="1">01</option>
+                      <option value="2">02</option>
+                      <option value="3">03</option>
+                      <option value="4">04</option>
+                      <option value="5">05</option>
+                      <option value="6">06</option>
+                      <option value="7">07</option>
+                      <option value="8">08</option>
+                      <option value="9">09</option>
+                      <option value="10">10</option>
+
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+       </select>
+       <select name="year" class="form-group ">
+
+  <option> - Year - </option>
+  <option value="1993">1993</option>
+  <option value="1992">1992</option>
+  <option value="1991">1991</option>
+  <option value="1990">1990</option>
+  <option value="1989">1989</option>
+  <option value="1988">1988</option>
+  <option value="1987">1987</option>
+  <option value="1986">1986</option>
+  <option value="1985">1985</option>
+  <option value="1984">1984</option>
+  <option value="1983">1983</option>
+  <option value="1982">1982</option>
+  <option value="1981">1981</option>
+  <option value="1980">1980</option>
+  <option value="1979">1979</option>
+  <option value="1978">1978</option>
+  <option value="1977">1977</option>
+  <option value="1976">1976</option>
+  <option value="1975">1975</option>
+  <option value="1974">1974</option>
+  <option value="1973">1973</option>
+  <option value="1972">1972</option>
+  <option value="1971">1971</option>
+  <option value="1970">1970</option>
+  <option value="1969">1969</option>
+  <option value="1968">1968</option>
+  <option value="1967">1967</option>
+  <option value="1966">1966</option>
+  <option value="1965">1965</option>
+  <option value="1964">1964</option>
+  <option value="1963">1963</option>
+  <option value="1962">1962</option>
+  <option value="1961">1961</option>
+  <option value="1960">1960</option>
+  <option value="1959">1959</option>
+  <option value="1958">1958</option>
+  <option value="1957">1957</option>
+  <option value="1956">1956</option>
+  <option value="1955">1955</option>
+  <option value="1954">1954</option>
+  <option value="1953">1953</option>
+  <option value="1952">1952</option>
+  <option value="1951">1951</option>
+  <option value="1950">1950</option>
+  <option value="1949">1949</option>
+  <option value="1948">1948</option>
+  <option value="1947">1947</option>
+  </select>
+      </div>
+    </div>
+     <div class="form-group">
+     <label>Gender:</label>
+       <div>
+      <label class="radio-label"><input type="radio" name="gender" value="m"/>Male</label>
+      <label class="radio-label"><input type="radio" name="gender" value="f"/>Female</label>
+       </div>
+     </div>
+      <div class="form-group">
+      <label for="comment">About you:</label>
+      <textarea class="form-control" rows="5" name="comment"></textarea>
+     </div>
+    </div>
+    <hr  style="width:80%;border-top:1px solid">
+    <div class="text-center">
+      <a href="#" class="btn btn-info btn-lg" role="button"><input type="submit" value="Proceed to step 2"/> <span><img src="images/small_triangle.png" alt="small_triangle"> </span></a>
+
+    </div>
+
+   </div>
+ </div>
+
+</form>
+
+    <!--container Start-->
+
+    <div style="width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0px solid red;
+    text-align: center;
+    background-color: #83867b;">
+      <img src="images/icon5.png" alt=""> <h5 style="display:inline;">FREE: Men Are From Mars</h5> <a href="#">Download Now</a>
+    </div>
+
+    <!-- footer start -->
+    <footer style="padding:78px 0 0 0;background-color: #333333;width:100%">
+     <div class="container" style="width:100%">
+      <div class="row">
+       <div class="col-sm-6">
+        <div>
+        <span class="left"><img src="images/foot_logo.png" alt=""></span>
+        </div>
+         <div>
+          <div ><!--Footer_Cont_Top2 Start-->
+           <h3 style="width: 48%;font-size: 20px;line-height: 55px;color: #ffffff;margin: 0;font-family: 'satisfy_regular';text-align: left;display: inline;">Call Us Today! (02) 9017 8413</h3>
+          </div>
+         </div>
+       </div>
+       <div class="col-sm-6">
+        <div><!--Footer_Cont_Top Start-->
+        <p style="font-family:'roboto_slablight';text-align:center;width:77%;
+    font-size: 17px;
+    line-height: 28px;
+    color: #ffffff;">Shortcut your search to happiness right now.Live a life without regrets and take action today!</p>
+        </div>
+        <div >
+         <a style="    width: 170px;
+    padding: 0;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    font-family: 'roboto_slabregular';
+    float: left;
+    display: block;
+    margin-right: 10px;
+    background-color: #9fbc35;"href="#">Book an Appointment <img src="images/icon7.png" alt=""></a>
+         <a style="width: 170px;
+    padding: 0;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    font-family: 'roboto_slabregular';
+    float: left;
+    display: block;
+    margin-right: 10px;
+    background-color: #9fbc35;"href="#">Contact a Consultant <img src="images/icon6.png" alt=""></a>
+        </div>
+       </div>
+     </div>
+     <div style="padding:70px 0 0 0">
+     <div class="row">
+      <div class="col-sm-4">
+          <div style="color: #9fbc35;"><!--Foot_Link1 Start-->
+
+        <h4>CONTACT INFO</h4>
+         <div style="font-size:10px">
+         <div><!--Foot_Link2 Start-->
+
+          <span>4/220 George St, Sydney NSW 2000</span>
+          <p>Phone: (02) 9017 8413</p>
+          <p>Email: <a href="#" target="_blank">info@syd.vitalpartners.com.au</a></p>
+
+        </div><!--Foot_Link2 End-->
+
+        <div><!--Foot_Link2 Start-->
+
+          <span>Canberra City Act 2600 </span>
+          <p>Phone: (02) 9017 8426</p>
+          <p>Email: <a href="#" target="_blank">can@syd.vitalpartners.com.au</a></p>
+
+        </div><!--Foot_Link2 End-->
+        </div>
+    </div><!--Foot_Link1 End-->
+    </div>
+    <div class="col-sm-4">
+      <div style="color: #9fbc35; line-height:2"><!--Foot_Link2 Start-->
+        <h4>RECENT POSTS</h4>
+         <div style="font-size:10px">
+        <div><!--Foot_Link3 Start-->
+          <ul>
+            <li><a href="#">How to Recover After a Bad Date</a></li>
+                        <li><a href="#">Review | Vital Partners Review</a></li>
+                        <li><a href="#">Review | Vital Partners Review</a></li>
+                        <li><a href="#">Review | Vital Partners Derek and Julie</a></li>
+                        <li><a href="#">7 Rules for a Happy Relationship | Vital Partners Dating Sydney</a></li>
+          </ul>
+        </div><!--Foot_Link3 End-->
+       </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div style="color: #9fbc35; line-height:2">
+        <h4>RECENT TWEETS</h4>
+         <div style="font-size:10px">
+        <div><!--Foot_Link4 Start-->
+          <ul>
+            <li>
+              <p>Are you being vulnerable to find love? via offline dating agency Sydney Canberra Vital Partners </p>
+                   <div>
+                    <a  href="#">http://t.co/hGCgHEU6If</a>
+                   <div style="float:right"> 1 week ago</div>
+                   </div>
+              </li>
+              <li>
+              <p>Are you being vulnerable to find love? via offline dating agency Sydney Canberra Vital Partners </p>
+              <div>
+                <a  href="#">http://t.co/hGCgHEU6If</a>
+                <div style="float:right"> 2 week ago</div>
+              </div>
+              </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+     </div>
+   </div>
+ </footer>
+
+<!-- last content
+
+      <div class="container"style="background-color: #141414;">
+
+        <div style="
+        border: 0px solid red;
+    height: auto;
+    margin: 0 10px;
+    padding: 0;
+    width: 25%;
+    color: #9b9b9b;
+    font-family: 'roboto_slabregular';float:left">
+
+        &copy; VitalPartners.com.au
+        </div>
+        <div style="
+    border: 0px solid red;
+    height: auto;
+    margin: 0 10px;
+    padding: 0;
+    color: #9b9b9b;
+    font-family: 'roboto_slabregular';float:left
+">
+        <a href="#">Contact</a> |  <a href="#">Terms of Use</a> |   <a href="#">Privacy Policy</a> |  <a href="#">Disclaimer</a>
+        </div>
+        <div style="
+
+    border: 0px solid red;
+    height: auto;
+    margin: 0 10px;
+    padding: 0;
+    font-family: 'roboto_slabregular';float:right">
+        <span>FOLLOW US:</span>
+
+        <nav class="navbar">
+          <ul class"nav navbar-nav">
+          <li><a href="#"><img src="images/icon10.png"></a></li>
+          <li><a href="#"><img src="images/icon11.png"></a></li>
+          <li><a href="#"><img src="images/icon12.png"></a></li>
+          <li><a href="#"><img src="images/icon13.png"></a></li>
+          <li><a href="#"><img src="images/icon14.png"></a></li>
+        </ul>
+        </nav>
+      </div>
+      </div>
+       -->
+
+
+
+
+
+
+ </div>
+</body>
+</html>
