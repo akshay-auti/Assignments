@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head><title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="calc.css">
+  <script src="calc.js"></script>
+
+ </head>
+ <body  style="display:block">
+  <div class="bg">
+   <form name="Calculator">
+   <div class="box">
+    <input class="textarea" type="text" name="textarea"></input>
+   </div>
+   <table>
+    <tr>
+     <td><input type="button" value=" 7" onclick="AddDigit('7')"/></td>
+     <td><input type="button" value=" 8 " onclick="AddDigit('8')"/></td>
+     <td><input type="button" value=" 9 " onclick="AddDigit('9')"/></td>
+     <td><input type="button" value=" / " onclick="Operate('/')"/></td>
+     <td><input type="button" value=" B" onclick="deleteChar(Calculator.textarea)"/></td>
+     <td><input type="button" value=" C" onclick="Clear()"/></td>
+    </tr>
+    <tr>
+     <td><input type="button" value=" 4" onclick="AddDigit('4')"/></td>
+     <td><input type="button" value=" 5 " onclick="AddDigit('5')"/></td>
+     <td><input type="button" value=" 6 " onclick="AddDigit('6')"/></td>
+     <td><input type="button" value=" * " onclick="Operate('*')"/></td>
+     <td><input type="button" value=" sin "onclick="Sin()"/></td>
+     <td><input type="button" value=" cos" onclick="Cos()"/></td>
+    </tr>
+    <tr>
+     <td><input type="button" value=" 1" onclick="AddDigit('1')"/></td>
+     <td><input type="button" value=" 2 " onclick="AddDigit('2')"/></td>
+     <td><input type="button" value=" 3 " onclick="AddDigit('3')"/></td>
+     <td><input type="button" value=" - " onclick="Operate('-')"/></td>
+     <td><input type="button" value=" x^2 " onclick="Square()"/></td>
+     <td><input type="button" value=" sqrt" onclick="Squareroot()"/></td>
+    </tr>
+    <tr>
+     <td><input type="button" value=" 0" onclick="AddDigit('0')"/></td>
+     <td><input type="button" value=" . " onclick="Dot()"/></td>
+     <td><input type="button" value=" % " onclick="Operate('%')"/></td>
+     <td><input type="button" value=" + " onclick="Operate('+')"/></td>
+     <td colspan="2"><input type="button" value=" = " onclick="Calculate()"/></td>
+    </tr>
+   </form>
+   </div>
+ </body>
+</html>
