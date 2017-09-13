@@ -15,7 +15,7 @@ var cpassword=document.myform.cpassword.value;
 
 
 // var age=document.myform.age.value;
-var genders=document.getElementsByName('gender[]');
+var genders=document.getElementsByName("gender[]");
 var options=document.getElementsByName("options[]");
 var aboutu=document.myform.comment.value;
 
@@ -65,7 +65,7 @@ else if (aboutu==null || aboutu==""){
         alert('Please check at least one of the options.');
         return false;
 }
-else if (genders[0].checked == false && genders[1].checked==false) {
+else if (genders[0].checked==false && genders[1].checked==false) {
                     alert("select your gender");
 
                     return false;

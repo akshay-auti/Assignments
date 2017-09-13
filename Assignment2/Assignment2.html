@@ -5,12 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script type="text/javascript" src="script.js"></script>
+<!-- <script type="text/javascript" src="script.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.validate.js"></script>
+
+<script type="text/javascript" src="jQuery.js"></script>
+
 </head>
 
 <body>
 <div class="container-fluid">
-<!-- header start -->
+<!-- header start
 
 <header style="width:100%">
 <div class="container">
@@ -141,7 +146,8 @@
     <div class="form-group" >
      <label>My birthdate is:</label>
       <div>
-       <select name="month" class="form-group selectpicker">
+       <select name="month" class="form-group selectpicker required">
+                      <option value="month">-month-</option>
                       <option value="1">Jan</option>
                       <option value="2">Feb</option>
                       <option value="3">March</option>
@@ -157,7 +163,8 @@
        </select>
 
 
-       <select name="day" class="form-group selectpicker">
+       <select name="day" class="form-group selectpicker required">
+                      <option value="day">-day-</option>
                       <option value="1">01</option>
                       <option value="2">02</option>
                       <option value="3">03</option>
@@ -192,7 +199,7 @@
                       <option value="30">30</option>
                       <option value="31">31</option>
        </select>
-       <select name="year" class="form-group ">
+       <select name="year" class="form-group required">
 
   <option> - Year - </option>
   <option value="1993">1993</option>
@@ -248,8 +255,8 @@
      <div class="form-group">
      <label>Gender:</label>
        <div>
-      <label class="radio-label"><input type="radio" name="gender" value="m"/>Male</label>
-      <label class="radio-label"><input type="radio" name="gender" value="f"/>Female</label>
+      <label class="radio-label"><input type="radio" name="gender[]" value="m"/>Male</label>
+      <label class="radio-label"><input type="radio" name="gender[]" value="f"/>Female</label>
        </div>
      </div>
       <div class="form-group">
