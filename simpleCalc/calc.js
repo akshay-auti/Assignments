@@ -3,7 +3,10 @@
   Operation = 0;
   MAXLENGTH = 30;
 
+
 function AddDigit(dig){
+
+  }
   if (Current.length > MAXLENGTH)
    {
        Current = "Aargh! Too long";
@@ -19,7 +22,8 @@ function AddDigit(dig){
           Current = Current + dig;
         }
      }
-   document.Calculator.textarea.value = Current;
+
+     document.Calculator.textarea.value = Current;
    }
 
 function Dot()                  //PUT IN "." if appropriate.
@@ -36,58 +40,56 @@ function Dot()                  //PUT IN "." if appropriate.
        }
 
       }
-  document.Calculator.textarea.value = Current;
+        document.Calculator.textarea.value  = Current;
  }
 
 function Clear()
   {
 
    Current = "0";
-   document.Calculator.textarea.value = Current;
+          document.Calculator.textarea.value = Current;
   }
 
 function Operate(op)
- {
-  if (op.indexOf("*") > -1)
   {
+
+switch(op){
+
+case "*":
     Operation = 1;
-  }
-  if (op.indexOf("/") > -1)
-  {
+    break;
+case "/":
     Operation = 2;
-  }
-  if (op.indexOf("+") > -1)
-  {
+    break;
+case "+":
     Operation = 3;
-  }
-  if (op.indexOf("-") > -1)
-  {
-      Operation = 4;
-  }
-  if (op.indexOf("%") > -1)
-  {
+    break;
+case "-":
+    Operation = 4;
+    break;
+case "%":
     Operation = 5;
-  }
-  if (op.indexOf("x^2") > -1)
-  {
+    break;
+case "x^2":
     Operation = 6;
-  }
-  if (op.indexOf("sqrt") > -1)
-  {
+    break;
+case "sqrt":
     Operation = 7;
-  }
-  if (op.indexOf("sin") > -1)
-  {
+    break;
+case "sin":
     Operation = 8;
-  }
-  if (op.indexOf("cos") > -1)
-  {
+    break;
+case "cos":
     Operation = 9;
-  }
+    break;
+
+default: document.write("Unknown operation!");
+ }
 
   Memory = Current;
   Current = "";
   document.Calculator.textarea.value = Current;
+
  }
 
  function Sq()
@@ -99,7 +101,7 @@ function Operate(op)
 
   Operation = 0;
   Memory ="0";
-  document.Calculator.textarea.value = Current;
+  document.Calculator.textarea.value  = Current;
 }
 
 function Square()
@@ -117,7 +119,7 @@ function sqr()
 
   Operation = 0;
   Memory ="0";
-  document.Calculator.textarea.value = Current;
+  document.Calculator.textarea.value= Current;
 }
 
 function Squareroot()
@@ -135,7 +137,7 @@ function S()
 
   Operation = 0;
   Memory = "0";
-  document.Calculator.textarea.value = Current;
+  document.Calculator.textarea.value  = Current;
 }
 
 function Sin()
@@ -153,7 +155,7 @@ function C()
 
   Operation = 0;
   Memory = "0";
-  document.Calculator.textarea.value = Current;
+  document.Calculator.textarea.value  = Current;
 }
 
 function Cos()
@@ -164,35 +166,34 @@ function Cos()
 
 function Calculate()
  {
-  if (Operation == 1)
-    {
-      Current = eval(Memory) * eval(Current);
-    }
-  if (Operation == 2)
-    {
-      Current = eval(Memory) / eval(Current);
-    }
-  if (Operation == 3)
-    {
-      Current = eval(Memory) + eval(Current);
-    }
-  if (Operation == 4)
-    {
-      Current = eval(Memory) - eval(Current);
-    }
-  if (Operation == 5)
-    {
-      Current = eval(Memory) % eval(Current);
-    }
+  switch(Operation){
+      case 1:
+        Current = eval(Memory) * eval(Current);
+        break;
+      case 2:
+        Current = eval(Memory) / eval(Current);
+        break;
+      case 3:
+        Current = eval(Memory) + eval(Current);
+        break;
+      case 4:
+        Current = eval(Memory) - eval(Current);
+        break;
+      case 5:
+        Current = eval(Memory) % eval(Current);
+        break;
+      }
 
   Operation = 0;                //clear operation
   Memory    = "0";              //clear memory
-  document.Calculator.textarea.value = Current;
+  document.Calculator.textarea.value  = Current;
+
  }
+
 
 function FixCurrent()
    {
-    Current = document.Calculator.Display.value;
+    Current = document.Calculator.textarea.value ;
     Current = "" + parseFloat(Current);
 
     if (Current.indexOf("NaN") != -1)
@@ -200,7 +201,7 @@ function FixCurrent()
         Current = "Aargh! I don't understand";
      }
 
-   document.Calculator.textarea.value = Current;
+   document.Calculator.textarea.value  = Current;
   }
 
 function deleteChar(input)

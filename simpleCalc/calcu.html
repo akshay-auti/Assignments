@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <head><title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="calc.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="caljq.js"></script>
+ </head>
+
+ <body>
+  <div><h1>Simple Calculator</h1></div>
+  <div class="bg">
+   <form name="Calculator">
+   <div class="box">
+    <div>
+    <ul class="demo" style="float:left"></ul>
+    </div>
+
+    <input class="display" type="text" name="textarea"></input>
+   </div>
+   <table>
+    <tr>
+     <td><input class="num-btn" data-role="number"type="button" value="7"/></td>
+     <td><input class="num-btn" data-role="number"type="button" value="8"/></td>
+     <td><input class="num-btn" data-role="number"type="button" value="9"/></td>
+     <td><input class="num-btn" data-role="operator"type="button" value="/"/></td>
+     <td><input class="bs-btn"type="button" value="BS"/></td>
+     <td><input class="clear-btn"type="button" value="C"/></td>
+    </tr>
+    <tr>
+     <td><input class="num-btn" data-role="number"type="button" value="4"/></td>
+     <td><input class="num-btn" data-role="number"type="button" value="5"/></td>
+     <td><input class="num-btn" data-role="number"type="button" value="6"/></td>
+     <td><input class="num-btn" data-role="operator"type="button" value="*"/></td>
+     <!-- <td><input class="sin-btn"type="button" value="sin"/></td> -->
+     <!-- <td><input class="cos-btn"type="button" value="cos"/></td> -->
+     <td><input class="brace-btn" data-role="bracket" type="button" value="("/></td>
+     <td><input class="brace-btn" data-role="bracket" type="button" value=")"/></td>
+    </tr>
+    <tr>
+     <td><input class="num-btn" data-role="number"type="button" value="1"/></td>
+     <td><input class="num-btn" data-role="number"type="button" value="2"/></td>
+     <td><input class="num-btn" data-role="number"type="button" value="3"/></td>
+     <td><input class="num-btn" data-role="operator"type="button" value="-"/></td>
+     <td><input class="square-btn" type="button" value="x^2"/></td>
+     <td><input class="sqrt-btn"type="button" value="sqrt" /></td>
+    </tr>
+    <tr>
+     <td><input class="num-btn" data-role="number"type="button" value="0"/></td>
+     <td><input class="num-btn" data-role="number"type="button" value="."/></td>
+     <td><input class="num-btn" data-role="operator"type="button" value="%"/></td>
+     <td><input class="num-btn" data-role="operator"type="button" value="+"></td>
+     <td colspan="2"><input class="calculate-btn" type="button" value="="/></td>
+    </tr>
+   </table>
+   </form>
+   </div>
+ </body>
+</html>

@@ -2,18 +2,26 @@
 <html>
  <head><title>Calculator</title>
   <link rel="stylesheet" type="text/css" href="calc.css">
-  <script src="calc.js"></script>
+  <script src="caljq.js"></script>
 
  </head>
- <body  style="display:block">
+
+ <body>
+  <div><h1>Simple Calculator</h1></div>
   <div class="bg">
    <form name="Calculator">
    <div class="box">
-    <input class="textarea" type="text" name="textarea"></input>
+    <div>
+    <p id="demo"> Hello</p>
+
+
+     </div>
+
+    <input class="textarea" type="text" name="textarea" id="textarea"></input>
    </div>
    <table>
     <tr>
-     <td><input type="button" value=" 7" onclick="AddDigit('7')"/></td>
+     <td><input type="button" value=" 7" onclick="AddDigit('7')" /></td>
      <td><input type="button" value=" 8 " onclick="AddDigit('8')"/></td>
      <td><input type="button" value=" 9 " onclick="AddDigit('9')"/></td>
      <td><input type="button" value=" / " onclick="Operate('/')"/></td>
@@ -43,6 +51,7 @@
      <td><input type="button" value=" + " onclick="Operate('+')"/></td>
      <td colspan="2"><input type="button" value=" = " onclick="Calculate()"/></td>
     </tr>
+   </table>
    </form>
    </div>
  </body>

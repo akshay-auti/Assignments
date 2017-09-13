@@ -1,6 +1,6 @@
 .bg{
-     width: 300px;
-     height: 248px;
+     width: 340px;
+     height: 437px;
      background-color: lightgrey;
      position: relative;
   }
@@ -10,14 +10,14 @@
      border: 1px solid grey;
      position: relative;
      top: 5px;
-     height: 100px
+     height: 150px
    }
 .textarea{
      display: block;
      position: relative;
      height: 40px;
-     width: 283px;
-     top: 56px;
+     width: 322px;
+     top: 15px;
      padding: 1px;
      margin: -1px;
      text-align: right;
@@ -28,6 +28,28 @@
    }
    input{
     width: 100%;
-    height: 30px;
+    height: 65px;
     border-radius: 1px;
   }
+    body{
+      display: block;
+      text-align: -webkit-center;
+    }
+
+.display{
+     display: block;
+     position: absolute;
+     height: 40px;
+     width: 322px;
+     top: 106px;
+     padding: 1px;
+     margin: -1px;
+     text-align: right;
+   }
+
+    ul{
+     list-style-type: none;
+     margin: 0px;
+     padding: 0px;
+   }
+
