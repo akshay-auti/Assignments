@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Date Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+
+  <body>
+   <div class="container">
+    <div class="jumbotron text-center">
+     <h2>Date Calculator</h2>
+     <p>Calculate duration between two dates.</p>
+    </div>
+    <div class="well">
+     <div class="row">
+      <div class="col-md-6">
+        <div>
+          <h3>Start Date</h3>
+        </div>
+        <div style="inline-box">
+          <div style="float:left">
+           <label style="display:block">Day:</label>
+           <input tad-va="date" placeholder="dd" type="text"pattern="[0-9]*" maxlength="2" size="3" name="d1" title="Please enter the day of the month as a one or two-digit number. The valid range is from 1 to 31." value="11"></input>
+          </div>
+          <div style="float:left">
+           <label style="display:block">Month:</label>
+           <input tad-va="date" placeholder="mm" type="text" maxlength="12" size="3" name="m1" title="Please enter the month of the year as a one or two-digit number, or as a name. The valid numeric range is from 1 to 12, and valid names, for example, are 'Oct' or 'October'." value="2">
+          </div>
+          <div style="float:left">
+           <label style="display:block">Year:</label>
+           <input placeholder="yyyy" type="text" tad-va="date" pattern="[0-9]*" maxlength="4" size="5"name="y1" title="Enter year as a 4-digit number." value="2017">
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </body>
+</html>
